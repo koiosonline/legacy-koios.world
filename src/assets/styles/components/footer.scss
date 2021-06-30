@@ -1,0 +1,22 @@
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 5em auto 3em;
+  @include for-size($mobile, $desktop) {
+    margin: 0 auto 3em;
+    padding: 0 2rem;
+  }
+  p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 1.125em;
+    color: $color-text;
+  }
+  &__underline {
+    width: 10em;
+    height: 3px;
+    background: $gradient-koios;
+    margin: 1em auto;
+  }
+}

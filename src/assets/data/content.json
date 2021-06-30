@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Learn and Earn",
+    "description": "Develop your skillset, expand your network and earn cryptocurrency by immersing yourself in a Koios World"
+  },
+  "article": [
+    {
+      "title": "About Koios",
+      "description": "Koios aims to become a decentralized learning platform, empowering learners, tutors, content creators & job providers to participate in an open learning environment. Koios is open-source, has no entry barriers and is available for all. Education as a common. Why? Because education is the most powerful tool to change the world.",
+      "links": [
+        {
+          "url": "https://twitter.com/koiostweets",
+          "content": "<img src='../assets/images/logos/twitter.svg' alt='twitter icon'>",
+          "img": "/images/twitter.svg"
+        },
+        {
+          "url": "https://wiki.koios.world/",
+          "content": "More info",
+          "img": null
+        }
+      ]
+    },
+    {
+      "title": "Koios DAO",
+      "description": "Koios aims to be fully owned and operated by its community as a decentralized autonomous organization (DAO). Koios will be governed via a democratic and transparent voting system which allows all stakeholders to get involved and shape Koios’s future.",
+      "links": [
+        {
+          "url": "https://jordijansen101.medium.com/new-technologies-enable-us-to-connect-and-learn-with-each-other-in-ways-that-were-never-possible-6667d1b75b4a",
+          "content": "<img src='../assets/images/logos/twitter.svg' alt='twitter icon'>",
+          "img": "/images/medium.svg"
+        },
+        {
+          "url": "https://snapshot.org/#/koios.eth",
+          "content": "Proposals"
+        }
+      ]
+    }
+  ]
+}

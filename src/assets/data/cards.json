@@ -1,0 +1,18 @@
+{
+  "cards": [
+    {
+      "imgUrl": "/images/Learn.svg",
+      "title": "Learn",
+      "description": "Build skills and reputation by participating in academic courses validated by ecosystems, in a free, gamified, and personalized learning environment.",
+      "linkTitle": "Start Learning",
+      "linkUrl": "https://app.koios.world/#/worlds"
+    },
+    {
+      "imgUrl": "/images/earn.svg",
+      "title": "Earn",
+      "description": "Connect with the network, apply gained knowledge and skills and earn different kinds of cryptocurrencies.",
+      "linkTitle": "Start Earning",
+      "linkUrl": "https://app.koios.world/#/coming-soon"
+    }
+  ]
+}
