@@ -7,11 +7,13 @@ import Hero from "./components/hero";
 import Cards from "./components/cards";
 import Article from "./components/article";
 import Footer from "./components/footer";
+import World from "./components/World";
 
 function App() {
   return (
     <div className="App">
         <Header/>
+        <World world={3} />
         <Hero title={content.hero.title} description={content.hero.description}/>
         <div className={'cardContainer'}>
         {cards.cards.map((cardData, index) => (
