@@ -13,18 +13,22 @@ function App() {
   return (
     <div className="App">
         <Header/>
-        <World world={3} />
-        <Hero title={content.hero.title} description={content.hero.description}/>
-        <div className={'cardContainer'}>
-        {cards.cards.map((cardData, index) => (
-            <Cards key={index}
-                   image={cardData.imgUrl}
-                   title={cardData.title}
-                   description={cardData.description}
-                   linkUrl={cardData.linkUrl}
-                   linkTitle={cardData.linkTitle}/>
-        ))}
-        </div>
+        <section className={'ctaContainer'}>
+          <div className={'ctaContainer__inner'}>
+            <Hero title={content.hero.title} description={content.hero.description}/>
+            <World world={3} />
+          </div>
+        </section>
+        {/*<div className={'cardContainer'}>*/}
+        {/*{cards.cards.map((cardData, index) => (*/}
+        {/*    <Cards key={index}*/}
+        {/*           image={cardData.imgUrl}*/}
+        {/*           title={cardData.title}*/}
+        {/*           description={cardData.description}*/}
+        {/*           linkUrl={cardData.linkUrl}*/}
+        {/*           linkTitle={cardData.linkTitle}/>*/}
+        {/*))}*/}
+        {/*</div>*/}
         <div className={'contentContainer'}>
             <div className={'contentContainer__articles'}>
                 {content.article.map((cardData, index) => (

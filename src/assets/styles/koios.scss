@@ -9,10 +9,11 @@
 @import "./base/typography";
 
 /* Components */
-@import "./components/header";
-@import "./components/button";
-@import "./components/hero";
-@import "./components/cards";
-@import "./components/content";
-@import "./components/footer";
-@import "./components/world";
+@import "src/assets/styles/components/header";
+@import "src/assets/styles/components/button";
+@import "src/assets/styles/components/hero";
+@import "src/assets/styles/components/cards";
+@import "src/assets/styles/components/content";
+@import "src/assets/styles/components/footer";
+@import "src/assets/styles/components/world";
+@import "src/assets/styles/components/cta";

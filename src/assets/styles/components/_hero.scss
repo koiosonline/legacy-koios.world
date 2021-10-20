@@ -1,0 +1,93 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 38em;
+
+  @include for-size($mobile, $desktop) {
+    padding: 0 $spacing-2x;
+  }
+
+  @include for-size($tablet) {
+    max-width: 480px;
+    padding: 0;
+  }
+  h1 {
+    font-family: Righteous, sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+    line-height: 59.6px;
+    text-align: left;
+    color: $color-text;
+    margin-bottom: 0.4em;
+    //color: white;
+
+    @include for-size($mobile, $desktop) {
+      font-size: 2.7em;
+    }
+
+    @include for-size($tablet) {
+      max-width: 480px;
+    }
+  }
+  p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 1.4em;
+    line-height: 30.17px;
+    text-align: left;
+    color: $color-text;
+    //color: white;
+
+    @include for-size($mobile, $desktop) {
+      font-size: 1.2em;
+      line-height: 25.17px;
+    }
+
+    @include for-size($tablet) {
+      max-width: 480px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    margin: 2em 0;
+
+    a {
+      border-radius: 11px;
+      text-decoration: none;
+      box-shadow: $button-shadow;
+      margin-right: 1em;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-flow: row;
+      background-color: white;
+
+      &:hover {
+        box-shadow: $button-shadow-hover;
+      }
+
+      &:active {
+        background-color: $button-active-color;
+      }
+
+      p {
+        padding: 0.25em 1.5em 0.25em 0.5em;
+        font-family: "Source Sans Pro", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        background: $gradient-koios;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      img {
+        padding: 4px 4px;
+        height: 36px;
+        width: 36px;
+      }
+    }
+  }
+}

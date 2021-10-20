@@ -36,7 +36,7 @@ const World = (props: any) => {
     if (world != null) {
       //Default setup
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+      const camera = new THREE.PerspectiveCamera( 75, mountRef.current.clientWidth/mountRef.current.clientHeight, 0.1, 1000 );
       const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
       const loader = new THREE.ObjectLoader();
       const controls = new OrbitControls( camera, renderer.domElement );
@@ -155,7 +155,7 @@ const World = (props: any) => {
 
       //Camera position viewport
       if (window.innerWidth < 400) {
-        camera.position.set( 0, 0, 3.5 );
+        camera.position.set( 0, 0, 2.5 );
       }
       controls.update();
 

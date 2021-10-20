@@ -1,0 +1,23 @@
+.ctaContainer {
+  //background-color: #3a384e;
+  //background-color: #121212;
+  background-color: #eeeeee;
+
+  &__inner {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap-reverse;
+    max-width: 1280px;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    @include for-size($tablet) {
+      justify-content: center;
+    }
+
+    @include for-size($desktop) {
+      justify-content: space-between;
+      padding: $spacing-2x;
+    }
+  }
+}
