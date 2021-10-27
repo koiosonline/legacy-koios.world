@@ -54,7 +54,7 @@
     flex-direction: row;
     margin: 2em 0;
 
-    a {
+    .link {
       border-radius: 11px;
       text-decoration: none;
       box-shadow: $button-shadow;
@@ -63,6 +63,7 @@
       display: flex;
       flex-flow: row;
       background-color: white;
+      align-items: center;
 
       &:hover {
         box-shadow: $button-shadow-hover;
@@ -73,7 +74,7 @@
         background-color: $button-active-color;
       }
 
-      p {
+      &__text {
         padding: 0.25em 1.5em 0.25em 0.5em;
         font-family: "Source Sans Pro", sans-serif;
         font-weight: 600;
