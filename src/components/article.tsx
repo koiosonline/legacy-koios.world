@@ -1,6 +1,8 @@
-const Article = (props: {title: string; description: string; links: any}) => {
+import React from "react";
+
+const Article = React.forwardRef((props: {title: string; description: string; links: any;}, ref: any) => {
     return (
-        <article className={'contentContainer__articles__article'}>
+        <article className={'contentContainer__articles__article'} ref={ref}>
             <h2>{props.title}</h2>
             <p>{props.description}</p>
             <div className={'contentContainer__articles__article__links'}>
@@ -10,6 +12,6 @@ const Article = (props: {title: string; description: string; links: any}) => {
             </div>
         </article>
     )
-}
+})
 
 export default Article;

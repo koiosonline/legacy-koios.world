@@ -1,22 +1,19 @@
 .world-container {
-  height: 415px;
+  padding-top: $spacing-3x;
+  height: 350px;
   width: 100vw;
-  //margin-top: -100px;
-  //margin-bottom: -200px;
-  //z-index: -1;
 
   @include for-size($tablet) {
+    padding-top: $spacing-3x;
     height: 500px;
     width: 500px;
-    margin-top: unset;
-    margin-bottom: unset;
   }
 
   @include for-size($desktop) {
+    padding-top: unset;
     height: 600px;
     width: 600px;
-    margin-top: unset;
-    margin-bottom: unset;
+    margin: auto 0;
   }
 
   &__world {

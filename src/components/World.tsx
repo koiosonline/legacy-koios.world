@@ -144,7 +144,12 @@ const World = (props: any) => {
         transparent: true
       });
       const atm = new THREE.Mesh(geometry, atmosphereMaterial);
-      atm.scale.set(1.1, 1.1, 1.1);
+
+      if (window.innerWidth < 400) {
+        atm.scale.set(1.125, 1.125, 1.125);
+      } else {
+        atm.scale.set(1.275, 1.275, 1.275);
+      }
       scene.add(atm);
 
       //Transparent background of renderer
@@ -155,7 +160,7 @@ const World = (props: any) => {
 
       //Camera position viewport
       if (window.innerWidth < 400) {
-        camera.position.set( 0, 0, 2.5 );
+        camera.position.set( 0, 0, 3 );
       }
       controls.update();
 
@@ -167,6 +172,8 @@ const World = (props: any) => {
           controls.enableRotate = false
         }
         controls.enableZoom = false;
+        controls.panSpeed = 0.25;
+        controls.rotateSpeed = 0.25;
         controls.target.set( 0, 0, 0 )
 
         if (sphere) {

@@ -1,14 +1,58 @@
 .header {
   width: 100%;
-  max-width: 1280px;
   padding: 1em 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
   align-items: flex-start;
+  position: fixed;
+  top: 0;
+  transition: background-color .25s ease;
 
-  img {
-    width: 118px;
-    height: 60px;
+  &--white {
+    background-color: white;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1280px;
+
+    img {
+      width: 118px;
+      height: 60px;
+    }
+
+    .link-holder {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+
+      &__link {
+        font-family: Righteous, sans-serif;
+        text-decoration: none;
+        margin-left: $spacing-2x;
+        color: $color-offwhite;
+        font-weight: 400;
+        font-size: 16px;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        transition: color .25s ease, border-bottom .25s ease;
+
+        &:hover {
+          border-bottom: 1px solid $color-offwhite;
+        }
+
+        @include for-size($tablet) {
+          margin-left: $spacing-4x;
+        }
+
+        &--dark {
+          color: #262626;
+
+          &:hover {
+            border-bottom: 1px solid #262626;
+          }
+        }
+      }
+    }
   }
 }
