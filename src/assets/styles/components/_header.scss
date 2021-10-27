@@ -27,7 +27,7 @@
       align-items: center;
 
       &__link {
-        font-family: Righteous, sans-serif;
+        font-family: $font-family-headings;
         text-decoration: none;
         margin-left: $spacing-2x;
         color: $color-offwhite;

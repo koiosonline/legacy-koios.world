@@ -13,8 +13,8 @@
     max-width: 480px;
     padding: 0;
   }
-  h1 {
-    font-family: Righteous, sans-serif;
+  &__title {
+    font-family: $font-family-headings;
     font-weight: 400;
     font-size: 3em;
     line-height: 59.6px;
@@ -31,8 +31,8 @@
     }
   }
 
-  p {
-    font-family: "Source Sans Pro", sans-serif;
+  &__description {
+    font-family: $font-family-base;
     font-weight: 500;
     font-size: 1.4em;
     line-height: 30.17px;

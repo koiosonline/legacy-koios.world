@@ -10,8 +10,8 @@ import {useRef} from "react";
 
 function App() {
 
-  let articleRef1 = useRef()
-  let articleRef2 = useRef()
+  const articleRef1 = useRef()
+  const articleRef2 = useRef()
 
   return (
     <div className="App">
@@ -19,8 +19,8 @@ function App() {
           articleRef1={articleRef1}
           articleRef2={articleRef2}
         />
-        <section className={'ctaContainer'}>
-          <div className={'ctaContainer__inner'}>
+        <section className={'cta-container'}>
+          <div className={'cta-container__inner'}>
             <Hero
               title={content.hero.title}
               description={content.hero.description}

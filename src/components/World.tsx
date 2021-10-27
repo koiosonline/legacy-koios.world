@@ -29,6 +29,9 @@ const World = (props: any) => {
 
   useEffect(() => {
 
+    //cleanup ref
+    const cleanUpRef = mountRef
+
     //World selection function
     handleWorldSelection(props.world);
 
@@ -210,7 +213,7 @@ const World = (props: any) => {
 
       animate();
 
-      return () => mountRef.current.removeChild(renderer.domElement);
+      return () => cleanUpRef.current.removeChild(renderer.domElement);
     }
   });
 
