@@ -29,6 +29,9 @@ const World = (props: any) => {
 
   useEffect(() => {
 
+    //cleanup ref
+    const cleanUpRef = mountRef
+
     //World selection function
     handleWorldSelection(props.world);
 
@@ -36,7 +39,7 @@ const World = (props: any) => {
     if (world != null) {
       //Default setup
       const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+      const camera = new THREE.PerspectiveCamera( 75, mountRef.current.clientWidth/mountRef.current.clientHeight, 0.1, 1000 );
       const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
       const loader = new THREE.ObjectLoader();
       const controls = new OrbitControls( camera, renderer.domElement );
@@ -144,7 +147,12 @@ const World = (props: any) => {
         transparent: true
       });
       const atm = new THREE.Mesh(geometry, atmosphereMaterial);
-      atm.scale.set(1.1, 1.1, 1.1);
+
+      if (window.innerWidth < 400) {
+        atm.scale.set(1.125, 1.125, 1.125);
+      } else {
+        atm.scale.set(1.275, 1.275, 1.275);
+      }
       scene.add(atm);
 
       //Transparent background of renderer
@@ -155,7 +163,7 @@ const World = (props: any) => {
 
       //Camera position viewport
       if (window.innerWidth < 400) {
-        camera.position.set( 0, 0, 3.5 );
+        camera.position.set( 0, 0, 3 );
       }
       controls.update();
 
@@ -167,6 +175,8 @@ const World = (props: any) => {
           controls.enableRotate = false
         }
         controls.enableZoom = false;
+        controls.panSpeed = 0.25;
+        controls.rotateSpeed = 0.25;
         controls.target.set( 0, 0, 0 )
 
         if (sphere) {
@@ -203,7 +213,7 @@ const World = (props: any) => {
 
       animate();
 
-      return () => mountRef.current.removeChild(renderer.domElement);
+      return () => cleanUpRef.current.removeChild(renderer.domElement);
     }
   });
 
