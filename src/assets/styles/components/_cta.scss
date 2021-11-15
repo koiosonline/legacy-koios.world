@@ -1,0 +1,27 @@
+.cta-container {
+  background: linear-gradient(120deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 55%, rgba(213,12,182,1) 100%);
+
+  @include for-size($tablet) {
+    background: linear-gradient(42deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 55%, rgba(213,12,182,1) 100%);
+  }
+
+  &__inner {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap-reverse;
+    max-width: 1280px;
+    min-height: 75vh;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    @include for-size($tablet) {
+      justify-content: center;
+    }
+
+    @include for-size($desktop) {
+      justify-content: space-between;
+      padding: $spacing-2x;
+      flex-wrap: unset;
+    }
+  }
+}

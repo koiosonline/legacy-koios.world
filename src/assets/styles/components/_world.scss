@@ -1,0 +1,37 @@
+.world-container {
+  padding-top: $spacing-3x;
+  height: 350px;
+  width: 100vw;
+
+  @include for-size($tablet) {
+    padding-top: $spacing-3x;
+    height: 500px;
+    width: 500px;
+  }
+
+  @include for-size($desktop) {
+    padding-top: unset;
+    height: 600px;
+    width: 600px;
+    margin: auto 0;
+  }
+
+  &__world {
+    height: 415px;
+    width: 300px;
+    margin: 0 auto;
+    z-index: -1;
+    pointer-events: none;
+
+    @include for-size($tablet) {
+      height: 500px;
+      width: 500px;
+    }
+
+    @include for-size($desktop) {
+      height: 600px;
+      width: 600px;
+      pointer-events: unset;
+    }
+  }
+}
