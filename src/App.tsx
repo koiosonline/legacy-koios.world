@@ -35,6 +35,10 @@ function App() {
                 <img src={'/images/artwork5.svg'} alt={'artwork'}/>
             </div>
         </div>
+        <section>
+            <h2>Upcoming events</h2>
+            <iframe title="Koios events" className="calender" src="https://calendar.google.com/calendar/embed?src=kf4eo2r45tprpo4nbh1b06mcibjotn6k%40import.calendar.google.com&ctz=Europe%2FAmsterdam" ></iframe>
+        </section>
         <Footer/>
     </div>
   );

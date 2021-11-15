@@ -1,10 +1,9 @@
-import React from 'react';
-
 const Footer = () => {
     return (
-        <footer className={'footerContainer'}>
+        <footer className={'footer'}>
             <p>We are experimenting. A new everything in the coming months.</p>
-            <div className={'footerContainer__underline'}/>
+               <p> Buidling on the shoulder of giants</p>
+            <div className={'footer__underline'}/>
         </footer>
     )
 }
