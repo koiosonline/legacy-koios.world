@@ -1,12 +1,10 @@
-import React from 'react';
-
 const Footer = () => {
-    return (
-        <footer className={'footerContainer'}>
-            <p>We are experimenting. A new everything in the coming months.</p>
-            <div className={'footerContainer__underline'}/>
-        </footer>
-    )
-}
+  return (
+    <footer className={"footer"}>
+      <p>building on the shoulders of Titans.</p>
+      <div className={"footer__underline"} />
+    </footer>
+  );
+};
 
 export default Footer;
