@@ -23,6 +23,11 @@
     z-index: -1;
     pointer-events: none;
 
+    @include for-size($mobile-large) {
+      height: 350px;
+      width: 350px;
+    }
+
     @include for-size($tablet) {
       height: 500px;
       width: 500px;
