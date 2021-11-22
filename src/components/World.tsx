@@ -148,7 +148,7 @@ const World = (props: any) => {
       });
       const atm = new THREE.Mesh(geometry, atmosphereMaterial);
 
-      if (window.innerWidth < 400) {
+      if (window.innerWidth <= 429) {
         atm.scale.set(1.125, 1.125, 1.125);
       } else {
         atm.scale.set(1.275, 1.275, 1.275);
