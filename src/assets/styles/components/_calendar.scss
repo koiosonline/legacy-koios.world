@@ -1,0 +1,119 @@
+.calendar-container {
+  max-width: 1080px;
+  margin: $spacing-10x auto 0;
+
+  &__inner {
+
+    .slider-container {
+      height: 200px;
+
+      h2 {
+        font-family: Righteous, sans-serif;
+        font-size: 2.4em;
+        line-height: 60px;
+        color: $color-text;
+        text-align: left;
+        margin-bottom: $spacing-4x;
+      }
+
+      .flickity-enabled {
+        overflow: hidden;
+        padding: $spacing-4x $spacing-2x;
+        position: relative;
+        &:focus {
+          outline: none;
+        }
+
+        &:before {
+          content  : "";
+          position : absolute;
+          z-index  : 1;
+          bottom   : 0;
+          left     : 0;
+          pointer-events   : none;
+          background-image : linear-gradient(to left, 
+                            rgba(255,255,255, 0), 
+                            rgba(255,255,255, 1) 90%);
+          width    : 20px;
+          height   : 100%;
+        }
+
+        &:after {
+          content  : "";
+          position : absolute;
+          z-index  : 1;
+          bottom   : 0;
+          right     : 0;
+          pointer-events   : none;
+          background-image : linear-gradient(to right, 
+                            rgba(255,255,255, 0), 
+                            rgba(255,255,255, 1) 90%);
+          width    : 20px;
+          height   : 100%;
+        }
+      }
+
+      .calendar-card {
+        width: 100%;
+        border-radius: 10px;
+        text-decoration: none;
+
+        @include for-size($desktop) {
+          width: unset;
+        }
+
+        .card {
+          display: flex;
+          flex-flow: row;
+          margin-right: $spacing-2x;
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0px 0px 21px -10px rgba(110,110,110,0.5);
+          color: $color-text;
+          text-decoration: none;
+          transition: box-shadow .25s ease;
+
+          &:hover {
+            box-shadow: 0px 0px 21px -10px rgba(110,110,110,1);
+          }
+
+          &__date {
+            padding: $spacing-2x;
+            // background: $gradient-koios;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-right: 1px solid #f2f2f2;
+
+            .date {
+              font-size: 2rem;
+              font-weight: 700;
+              text-decoration: none;
+            }
+
+            .month-year {
+              display: flex;
+              flex-flow: row;
+              text-decoration: none;
+              
+              p {
+                margin: 0 2px;
+              }
+            }
+          }
+
+          &__info {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            padding: $spacing-2x;
+            text-align: left;
+            
+            h3 {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
