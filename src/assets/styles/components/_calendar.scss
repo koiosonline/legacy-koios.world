@@ -13,10 +13,10 @@
         line-height: 60px;
         color: $color-text;
         text-align: left;
-        margin-bottom: $spacing-4x;
+        padding: 0 $spacing-2x;
       }
 
-      .flickity-enabled {
+      .swiper {
         overflow: hidden;
         padding: $spacing-4x $spacing-2x;
         position: relative;
@@ -25,31 +25,31 @@
         }
 
         &:before {
-          content  : "";
-          position : absolute;
-          z-index  : 1;
-          bottom   : 0;
-          left     : 0;
-          pointer-events   : none;
-          background-image : linear-gradient(to left, 
+          content: "";
+          position: absolute;
+          z-index: 1;
+          bottom: 0;
+          left: 0;
+          pointer-events: none;
+          background-image: linear-gradient(to left, 
                             rgba(255,255,255, 0), 
                             rgba(255,255,255, 1) 90%);
-          width    : 20px;
-          height   : 100%;
+          width: 20px;
+          height: 100%;
         }
 
         &:after {
-          content  : "";
-          position : absolute;
-          z-index  : 1;
-          bottom   : 0;
-          right     : 0;
-          pointer-events   : none;
-          background-image : linear-gradient(to right, 
+          content: "";
+          position: absolute;
+          z-index: 1;
+          bottom: 0;
+          right: 0;
+          pointer-events: none;
+          background-image: linear-gradient(to right, 
                             rgba(255,255,255, 0), 
                             rgba(255,255,255, 1) 90%);
-          width    : 20px;
-          height   : 100%;
+          width: 20px;
+          height: 100%;
         }
       }
 
@@ -57,6 +57,7 @@
         width: 100%;
         border-radius: 10px;
         text-decoration: none;
+        margin: auto 0;
 
         @include for-size($desktop) {
           width: unset;
@@ -65,7 +66,6 @@
         .card {
           display: flex;
           flex-flow: row;
-          margin-right: $spacing-2x;
           background-color: white;
           border-radius: 10px;
           box-shadow: 0px 0px 21px -10px rgba(110,110,110,0.5);
@@ -88,6 +88,9 @@
               font-size: 2rem;
               font-weight: 700;
               text-decoration: none;
+              background: linear-gradient(to right, #ff0bac, #2f12dc);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
             }
 
             .month-year {
@@ -114,6 +117,19 @@
           }
         }
       }
+    }
+  }
+
+  .swiper-button-prev {
+    &::after {
+      background-color: white;
+    }
+  }
+
+  .swiper-pagination {
+
+    .swiper-pagination-bullet {
+      background: #969696 !important;
     }
   }
 }
