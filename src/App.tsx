@@ -6,6 +6,7 @@ import Hero from "./components/hero";
 import Article from "./components/article";
 import Footer from "./components/footer";
 import World from "./components/World";
+import Calendar from "./components/calendar";
 import {useRef} from "react";
 
 function App() {
@@ -28,6 +29,11 @@ function App() {
             <World world={3} />
           </div>
         </section>
+        {/* <section className={'calendar-container'}>
+          <div className={'calendar-container__inner'}>
+            <Calendar />
+          </div>
+        </section> */}
         <div className={'contentContainer'}>
             <div className={'contentContainer__articles'}>
                 {content.article.map((cardData, index) => (
