@@ -29,11 +29,11 @@ function App() {
             <World world={3} />
           </div>
         </section>
-        <section className={'calendar-container'}>
+        {/* <section className={'calendar-container'}>
           <div className={'calendar-container__inner'}>
             <Calendar />
           </div>
-        </section>
+        </section> */}
         <div className={'contentContainer'}>
             <div className={'contentContainer__articles'}>
                 {content.article.map((cardData, index) => (
