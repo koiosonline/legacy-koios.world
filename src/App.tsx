@@ -6,7 +6,7 @@ import Hero from "./components/hero";
 import Article from "./components/article";
 import Footer from "./components/footer";
 import World from "./components/World";
-import Calendar from "./components/calendar";
+// import Calendar from "./components/calendar";
 import {useRef} from "react";
 
 function App() {
