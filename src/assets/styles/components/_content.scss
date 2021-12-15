@@ -4,6 +4,7 @@
   justify-content: space-around;
   max-width: 1280px;
   margin: 8em auto;
+  flex-wrap: wrap;
 
   @include for-size($mobile, $desktop) {
     margin: 0 auto;
@@ -78,8 +79,19 @@
   }
 
   &__artwork {
-    @include for-size($mobile, $desktop) {
-      display: none;
+    max-width: 480px;
+    max-height: 480px;
+
+    p {
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 12px;
+      line-height: 30px;
+      text-align: left;
+      color: #262626;
+    }
+
+    .recharts-responsive-container {
+      width: 500px;
     }
   }
 }
