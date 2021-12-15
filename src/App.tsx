@@ -8,6 +8,7 @@ import Footer from "./components/footer";
 import World from "./components/World";
 // import Calendar from "./components/calendar";
 import {useRef} from "react";
+import Chart from './components/chart';
 
 function App() {
 
@@ -45,7 +46,9 @@ function App() {
                 ))}
             </div>
             <div className={'contentContainer__artwork'}>
-                <img src={'/images/artwork5.svg'} alt={'artwork'}/>
+                {/* <img src={'/images/artwork5.svg'} alt={'artwork'}/> */}
+                {/* <h2>Decentralization</h2> */}
+                <Chart/>
             </div>
         </div>
         <Footer/>
