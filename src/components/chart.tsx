@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { PieChart, Pie, Tooltip, ResponsiveContainer, Cell, Treemap } from 'recharts';
+import { Tooltip, ResponsiveContainer, Treemap } from 'recharts';
 import { getTokenHolders } from '../utils/getTokenHolders';
 
 interface tokenholders {
@@ -11,17 +11,11 @@ interface tokenholders {
 }
 
 const Chart = () => {
-  const [width, setWidth] = useState(window.innerWidth)
   const [tokenHolders, setTokenHolders] = useState<tokenholders[]>([])
-  const [withValueHolders, setWithValueHolders] = useState<any[]>([])
+  const [withValueHolders, setWithValueHolders] = useState<tokenholders[]>([])
   const colors = ['#080875', '#18087C', '#3E0A86', '#6F0A95', '#970BA1']
 
-  useEffect(() => {
-    window.addEventListener('resize', () => {
-      setWidth(window.innerWidth)
-    })
-  })
-
+  // Get's token data
   const handleTokenHolders = async () => {
     const holders = await getTokenHolders()
     if (holders.data.users.length >= 1) {
@@ -33,6 +27,7 @@ const Chart = () => {
     handleTokenHolders()
   }, [])
 
+  // Converts token ammount per holder to actual tokens
   useEffect(() => {
     if (tokenHolders) {
       tokenHolders.map((data) => {
@@ -45,8 +40,8 @@ const Chart = () => {
 
   return (
     <>
-    <p>Top 100 Titan token decentralization</p>
-      <ResponsiveContainer width={width >= 500 ? 480 : 350} height={width >= 500 ? 480 : 350}>
+      <p>Top 100 Titan token decentralization</p>
+      <ResponsiveContainer width='100%' height='100%'>
         <Treemap
           data={withValueHolders}
           nameKey="address"
