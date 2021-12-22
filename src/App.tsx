@@ -45,9 +45,7 @@ function App() {
                       description={cardData.description} links={cardData.links}/>
                 ))}
             </div>
-            <div className={'contentContainer__artwork'}>
-                {/* <img src={'/images/artwork5.svg'} alt={'artwork'}/> */}
-                {/* <h2>Decentralization</h2> */}
+            <div className={'contentContainer__artwork animation-slide-in'}>
                 <Chart/>
             </div>
         </div>
