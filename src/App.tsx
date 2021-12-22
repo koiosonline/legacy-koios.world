@@ -35,8 +35,8 @@ function App() {
             <Calendar />
           </div>
         </section> */}
-        <div className={'contentContainer'}>
-            <div className={'contentContainer__articles'}>
+        <div className={'content-container'}>
+            <div className={'content-container__articles'}>
                 {content.article.map((cardData, index) => (
                     <Article
                       key={index}
@@ -45,7 +45,7 @@ function App() {
                       description={cardData.description} links={cardData.links}/>
                 ))}
             </div>
-            <div className={'contentContainer__artwork animation-slide-in'}>
+            <div className={'content-container__artwork animation-slide-in'}>
                 <Chart/>
             </div>
         </div>
