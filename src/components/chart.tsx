@@ -10,6 +10,11 @@ interface tokenholders {
   id: string
 }
 
+const handleClick = (e) => {
+  const url = `https://polygonscan.com/address/${e.address}`
+  window.open(url, '_blank')
+}
+
 const Chart = () => {
   const [tokenHolders, setTokenHolders] = useState<tokenholders[]>([])
   const [withValueHolders, setWithValueHolders] = useState<tokenholders[]>([])
@@ -51,7 +56,8 @@ const Chart = () => {
           isUpdateAnimationActive={true}
           // @ts-ignore: recharts has type error in the colorPanel property.
           colorPanel={colors}
-        >
+          onClick={(e) => handleClick(e)}
+          >
           <Tooltip formatter={(value, name) => [`${value} Titan tokens`, name]}/>
         </Treemap>
       </ResponsiveContainer>
