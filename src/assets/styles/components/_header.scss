@@ -37,6 +37,9 @@
         cursor: pointer;
         border-bottom: 1px solid transparent;
         transition: color .25s ease, border-bottom .25s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
 
         &:hover {
           border-bottom: 1px solid $color-offwhite;
@@ -46,8 +49,19 @@
           margin-left: $spacing-4x;
         }
 
+        &--icon {
+          height: 1em;
+          width: 1em;
+          fill: $color-offwhite;
+          margin-bottom: -1px;
+        }
+
         &--dark {
           color: #262626;
+        
+          .link-holder__link--icon {
+            fill: #262626;
+          }
 
           &:hover {
             border-bottom: 1px solid #262626;
