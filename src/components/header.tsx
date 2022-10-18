@@ -1,4 +1,4 @@
-import React, { RefObject, useState } from "react";
+import { RefObject, useState } from "react";
 import logo from "../assets/images/logos/koios-logo.svg";
 
 const Header = (props: { articleRef1: RefObject<HTMLDivElement>; articleRef2: RefObject<HTMLDivElement> }) => {
